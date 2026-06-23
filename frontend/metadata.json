@@ -1,0 +1,6 @@
+{
+  "name": "YLRK Beschriftungen",
+  "description": "High-converting website for a local signage and vehicle wrapping business.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

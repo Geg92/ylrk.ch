@@ -1,0 +1,167 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FCFCFD" />
+      <stop offset="100%" stop-color="#E8ECEF" />
+    </radialGradient>
+
+    <!-- Polo Fabric Gradient for shadow and depth -->
+    <linearGradient id="fabric-shimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="45%" stop-color="#F2F4F7" />
+      <stop offset="70%" stop-color="#E4E7EC" />
+      <stop offset="100%" stop-color="#CED4DA" />
+    </linearGradient>
+
+    <!-- Inner Collar shadow -->
+    <radialGradient id="inner-shadow" cx="50%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Button shading -->
+    <radialGradient id="button-grad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </radialGradient>
+
+    <!-- Fabric Noise/Texture Pattern -->
+    <pattern id="polo-mesh" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="#FFFFFF" fill-opacity="0.3" />
+      <circle cx="2" cy="2" r="1" fill="#E2E8F0" fill-opacity="0.6" />
+    </pattern>
+
+    <!-- Drop Shadow for aesthetics -->
+    <filter id="soft-shadow" x="-5%" y="-5%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="url(#bg-grad)" />
+
+  <!-- Subtle grid lines in background for studio layout feel -->
+  <g opacity="0.15">
+    <path d="M 0 100 L 800 100 M 0 200 L 800 200 M 0 300 L 800 300 M 0 400 L 800 400 M 0 500 L 800 500 M 0 600 L 800 600 M 0 700 L 800 700" stroke="#94A3B8" stroke-width="0.5" />
+    <path d="M 100 0 L 100 800 M 200 0 L 200 800 M 300 0 L 300 800 M 400 0 L 400 800 M 500 0 L 500 800 M 600 0 L 600 800 M 700 0 L 700 800" stroke="#94A3B8" stroke-width="0.5" />
+  </g>
+
+  <!-- Main Polo Shirt Container Group -->
+  <g filter="url(#soft-shadow)">
+    <!-- Main Body Base -->
+    <path d="M 220 180 L 120 280 C 120 300 150 330 170 330 L 210 290 L 220 720 C 220 740 240 750 260 750 L 540 750 C 560 750 580 740 580 720 L 590 290 L 630 330 C 650 330 680 300 680 280 L 580 180 C 560 170 540 165 490 168 L 310 168 C 260 165 240 170 220 180 Z" fill="url(#fabric-shimmer)" />
+    
+    <!-- Fine Pique Texture Overlay -->
+    <path d="M 220 180 L 120 280 C 120 300 150 330 170 330 L 210 290 L 220 720 C 220 740 240 750 260 750 L 540 750 C 560 750 580 740 580 720 L 590 290 L 630 330 C 650 330 680 300 680 280 L 580 180 C 560 170 540 165 490 168 L 310 168 C 260 165 240 170 220 180 Z" fill="url(#polo-mesh)" />
+
+    <!-- Sleeves Stitching Lines -->
+    <path d="M 170 260 L 138 298" stroke="#D1D5DB" stroke-width="1.5" stroke-dasharray="3 3" />
+    <path d="M 630 260 L 662 298" stroke="#D1D5DB" stroke-width="1.5" stroke-dasharray="3 3" />
+
+    <!-- Placket (Knopfleiste) -->
+    <rect x="375" y="240" width="50" height="190" fill="#F8FAFC" rx="4" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.06))" />
+    <rect x="375" y="240" width="50" height="190" fill="url(#polo-mesh)" rx="4" />
+    <path d="M 375 240 L 375 430 M 425 240 L 425 430" stroke="#E2E8F0" stroke-width="1" />
+    <path d="M 400 240 L 400 430" stroke="#F1F5F9" stroke-width="1.5" stroke-dasharray="3 2" />
+
+    <!-- Buttons -->
+    <!-- Button 1 -->
+    <circle cx="400" cy="275" r="8" fill="url(#button-grad)" filter="drop-shadow(0px 1px 2px rgba(0,0,0,0.15))" />
+    <circle cx="400" cy="275" r="5" fill="none" stroke="#94A3B8" stroke-width="0.5" />
+    <circle cx="398" cy="273" r="1.2" fill="#64748B" />
+    <circle cx="402" cy="273" r="1.2" fill="#64748B" />
+    <circle cx="398" cy="277" r="1.2" fill="#64748B" />
+    <circle cx="402" cy="277" r="1.2" fill="#64748B" />
+    
+    <!-- Button 2 -->
+    <circle cx="400" cy="330" r="8" fill="url(#button-grad)" filter="drop-shadow(0px 1px 2px rgba(0,0,0,0.15))" />
+    <circle cx="400" cy="330" r="5" fill="none" stroke="#94A3B8" stroke-width="0.5" />
+    <circle cx="398" cy="328" r="1.2" fill="#64748B" />
+    <circle cx="402" cy="328" r="1.2" fill="#64748B" />
+    <circle cx="398" cy="332" r="1.2" fill="#64748B" />
+    <circle cx="402" cy="332" r="1.2" fill="#64748B" />
+
+    <!-- Button 3 -->
+    <circle cx="400" cy="385" r="8" fill="url(#button-grad)" filter="drop-shadow(0px 1px 2px rgba(0,0,0,0.15))" />
+    <circle cx="400" cy="385" r="5" fill="none" stroke="#94A3B8" stroke-width="0.5" />
+    <circle cx="398" cy="383" r="1.2" fill="#64748B" />
+    <circle cx="402" cy="383" r="1.2" fill="#64748B" />
+    <circle cx="398" cy="387" r="1.2" fill="#64748B" />
+    <circle cx="402" cy="387" r="1.2" fill="#64748B" />
+
+    <!-- Left Collar Wing -->
+    <path d="M 400 240 C 370 240 310 215 250 172 C 240 165 240 152 255 158 L 375 220 C 390 227 400 235 400 240 Z" fill="#F8FAFC" filter="drop-shadow(-4px 6px 10px rgba(15,23,42,0.1))" />
+    <path d="M 400 240 C 370 240 310 215 250 172 C 240 165 240 152 255 158 L 375 220 C 390 227 400 235 400 240 Z" fill="url(#polo-mesh)" />
+    <!-- Collar fold detailing -->
+    <path d="M 250 172 L 375 220" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="3 3" />
+
+    <!-- Right Collar Wing -->
+    <path d="M 400 240 C 430 240 490 215 550 172 C 560 165 560 152 545 158 L 425 220 C 410 227 400 235 400 240 Z" fill="#F1F5F9" filter="drop-shadow(4px 6px 10px rgba(15,23,42,0.1))" />
+    <path d="M 400 240 C 430 240 490 215 550 172 C 560 165 560 152 545 158 L 425 220 C 410 227 400 235 400 240 Z" fill="url(#polo-mesh)" />
+    <path d="M 550 172 L 425 220" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="3 3" />
+
+    <!-- Inner neck circle and shadow -->
+    <path d="M 310 168 C 310 200 490 200 490 168" fill="url(#inner-shadow)" />
+
+    <!-- Inner Label/Brand styling (ENGELBERT STRAUSS / size mockup) -->
+    <g transform="translate(370, 150)" opacity="0.35">
+      <rect x="0" y="0" width="60" height="25" rx="3" fill="#EF4444" />
+      <text x="30" y="10" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="900" font-size="6" text-anchor="middle">ENGELBERT</text>
+      <text x="30" y="18" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="950" font-size="7" text-anchor="middle">TRAUSS</text>
+      <text x="30" y="32" fill="#1E293B" font-family="'Inter', sans-serif" font-weight="bold" font-size="8" text-anchor="middle">L</text>
+    </g>
+
+    <!-- Side wrinkles and shadows in fabric for realism -->
+    <path d="M 220 400 C 250 430 240 480 225 510" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round" opacity="0.4" />
+    <path d="M 580 440 C 550 470 555 520 575 550" stroke="#E2E8F0" stroke-width="3" stroke-linecap="round" opacity="0.4" />
+    <path d="M 320 710 C 360 720 440 720 480 710" stroke="#E2E8F0" stroke-width="2.5" stroke-linecap="round" opacity="0.5" />
+    <path d="M 240 750 L 560 750" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 4" />
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- "AUTO STATION SEMPACH" CUSTOM EMBROIDERED LOGO -->
+  <!-- ======================================================== -->
+  <g id="brand-logo-embroidery" transform="translate(435, 485)">
+    <!-- Simulated Stitch Embroidery Texture Filter for Logo -->
+    <filter id="stitch-effect" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse">
+      <feTurbulence type="fractalNoise" baseFrequency="0.45" numOctaves="4" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+
+    <g filter="url(#stitch-effect)">
+      <!-- INTERLOCKING TRIANGLE LOGO (Exact Monogram Shape) -->
+      <g stroke="#1A1D20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Big outer mountain triangle (Auto Station/Sempach double pyramid) -->
+        <path d="M 75 0 L 15 85 L 135 85 Z" fill="none" stroke-width="12" />
+        
+        <!-- Inner sharp dynamic diagonal vector bars forming the "A" and "S" layout -->
+        <path d="M 50 85 L 75 40 L 90 65" fill="none" stroke-width="9" />
+        <path d="M 110 85 L 75 25" fill="none" stroke-width="9" />
+        
+        <!-- Bottom ground line accent -->
+        <path d="M 5 95 L 145 95" stroke-width="6" />
+      </g>
+
+      <!-- BRAND TEXT: AUTO STATION SEMPACH -->
+      <!-- Clean, geometric, corporate tracking spacing -->
+      <text x="75" y="130" 
+            fill="#1A1D20" 
+            font-family="'Inter', 'Space Grotesk', -apple-system, sans-serif" 
+            font-weight="900" 
+            font-size="12" 
+            letter-spacing="1.2" 
+            text-anchor="middle">
+        AUTO STATION SEMPACH
+      </text>
+    </g>
+
+    <!-- Tiny white stitch highlights overlay for photographic stitching looks -->
+    <g opacity="0.25">
+      <path d="M 75 0 L 15 85 L 135 85 Z" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="1 1.5" />
+      <path d="M 50 85 L 75 40 L 90 65" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="1 1" />
+      <text x="75" y="130" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="900" font-size="12" letter-spacing="1.2" text-anchor="middle" stroke="#FFFFFF" stroke-width="0.3" opacity="0.4">AUTO STATION SEMPACH</text>
+    </g>
+  </g>
+</svg>

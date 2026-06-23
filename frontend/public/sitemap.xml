@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ylrk-beschriftungen.ch/</loc>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Da es sich um einen Onepager (Single Page Application) handelt, 
+       sind die wichtigsten Bereich auch auf der Hauptseite, aber falls künftig
+       Unterseiten hinzukommen, können sie hier gelistet werden. -->
+</urlset>
