@@ -12,19 +12,19 @@ export function Testimonials() {
       name: 'Kunde',
       company: 'H-THERM GmbH',
       rating: 5,
-      image: 'https://drive.google.com/thumbnail?id=1Fs_j8k0Vd22-hB7pPkPBhPEf0vPCHXwd&sz=w1000'
+      image: '/images/h_therm_photo.png'
     },
     {
       name: 'Kunde',
       company: 'HAGEX HAUSHALTSGERÄTE',
       rating: 5,
-      image: 'https://drive.google.com/thumbnail?id=1VepgNFq74v1u2D4DCbmDuFVnsJGh-wk-&sz=w1000'
+      image: '/images/hagex_photo.jpg'
     },
     {
       name: 'Kunde',
       company: 'Auto Station Sempach',
       rating: 5,
-      image: 'https://drive.google.com/thumbnail?id=1jdkg6gmMjVmBJvi7e5URyUg0Ax3AS3Ik&sz=w1000'
+      image: '/images/auto_station_sempach_photo.jpg'
     }
   ];
 
