@@ -24,10 +24,13 @@ const InstagramIcon = ({ className, size = 24 }: { className?: string, size?: nu
 );
 
 const POSTS = [
-  { id: 'insta-1', likes: 184, comments: 32, src: 'https://images.unsplash.com/photo-1552554746-81676f140d34?auto=format&fit=crop&q=80&w=600' },
-  { id: 'insta-2', likes: 89, comments: 5, src: 'https://images.unsplash.com/photo-1621252179027-94459d278660?auto=format&fit=crop&q=80&w=600' },
-  { id: 'insta-3', likes: 210, comments: 24, src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=600' },
-  { id: 'insta-4', likes: 156, comments: 14, src: 'https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&q=80&w=600' },
+  { id: 'insta-1', likes: 184, comments: 32, src: '/images/hagex_photo.jpg' },
+  { id: 'insta-2', likes: 156, comments: 19, src: '/images/barberossa.jpg' },
+  { id: 'insta-3', likes: 203, comments: 27, src: '/images/cleanax.jpg' },
+  { id: 'insta-4', likes: 142, comments: 14, src: '/images/ek_isol.jpg' },
+  { id: 'insta-5', likes: 168, comments: 21, src: '/images/h_therm_photo.png' },
+  { id: 'insta-6', likes: 97, comments: 8, src: '/images/chollerstrasse_pylon.jpg' },
+  { id: 'insta-7', likes: 210, comments: 24, src: '/images/auto_station_sempach_photo.jpg' },
 ];
 
 export function InstagramSection() {
