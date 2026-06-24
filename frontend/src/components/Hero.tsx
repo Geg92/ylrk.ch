@@ -120,14 +120,6 @@ export function Hero() {
               preload="auto"
               data-testid="hero-video"
             />
-
-            {/* Top overlay badge */}
-            <div className="absolute inset-x-0 top-0 bg-gradient-to-b from-black/70 to-transparent p-6 z-10 flex justify-between items-start pointer-events-none">
-              <div className="flex items-center gap-2 bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
-                <span className="w-2.5 h-2.5 rounded-full bg-brand-cyan animate-pulse" />
-                <span className="text-[11px] font-mono text-white tracking-wider uppercase">{t('hero.preview')}</span>
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>
