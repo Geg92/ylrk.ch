@@ -19,7 +19,6 @@ import { Footer } from './components/Footer';
 import { FloatingContact } from './components/FloatingContact';
 import { MobileStickyCall } from './components/MobileStickyCall';
 import { AIChatBot } from './components/AIChatBot';
-import { AIDesignStudio } from './components/AIDesignStudio';
 
 const sectionMeta: Record<string, { title: string; description: string }> = {
   "home": { 
@@ -111,7 +110,6 @@ export default function App() {
           <TrustBadges />
           <ExperienceStats />
           <Services />
-          <AIDesignStudio />
           <CostCalculator />
           <Testimonials />
           <Process />
