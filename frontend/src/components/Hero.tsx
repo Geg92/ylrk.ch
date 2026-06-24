@@ -1,58 +1,10 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Star, Camera, Trash2 } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 import { TypewriterText } from './TypewriterText';
-import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../lib/LanguageContext';
-import { getStoredHeroVideo, saveStoredHeroVideo, deleteStoredHeroVideo } from '../lib/mediaDb';
 
 export function Hero() {
   const { t, language } = useLanguage();
-  const [localVideoUrl, setLocalVideoUrl] = useState<string | null>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    async function loadStoredVideo() {
-      const blob = await getStoredHeroVideo();
-      if (blob) {
-        setLocalVideoUrl(URL.createObjectURL(blob));
-      }
-    }
-    loadStoredVideo();
-
-    return () => {
-      if (localVideoUrl) {
-        URL.revokeObjectURL(localVideoUrl);
-      }
-    };
-  }, []);
-
-  const handleVideoUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (!e.target.files || !e.target.files[0]) return;
-    const file = e.target.files[0];
-    
-    const success = await saveStoredHeroVideo(file);
-    if (success) {
-      if (localVideoUrl) {
-        URL.revokeObjectURL(localVideoUrl);
-      }
-      setLocalVideoUrl(URL.createObjectURL(file));
-    } else {
-      alert('Fehler beim Speichern des Videos.');
-    }
-    if (e.target) {
-      e.target.value = '';
-    }
-  };
-
-  const handleRemoveVideo = async () => {
-    const success = await deleteStoredHeroVideo();
-    if (success) {
-      if (localVideoUrl) {
-        URL.revokeObjectURL(localVideoUrl);
-      }
-      setLocalVideoUrl(null);
-    }
-  };
 
   const scrollToContact = () => {
     document.getElementById('offerte')?.scrollIntoView({ behavior: 'smooth' });
@@ -135,6 +87,7 @@ export function Hero() {
             <button 
               onClick={scrollToContact}
               className="bg-brand-cyan text-white px-8 py-4 rounded text-lg font-bold hover:opacity-80 transition-colors flex items-center justify-center uppercase tracking-wide group"
+              data-testid="hero-quote-button"
             >
               {t('nav.offerte')}
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -148,16 +101,7 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* Hidden File Input */}
-        <input
-          type="file"
-          ref={fileInputRef}
-          className="hidden"
-          accept="video/*"
-          onChange={handleVideoUpload}
-        />
-
-        {/* Hero Asset Container (Interactive Video Player) */}
+        {/* Hero Video Showcase (autoplay loop) */}
         <motion.div
            initial={{ opacity: 0, x: 20 }}
            animate={{ opacity: 1, x: 0 }}
@@ -166,59 +110,22 @@ export function Hero() {
            className="relative h-[450px] lg:h-[580px] rounded-2xl overflow-hidden border border-black/10 bg-brand-surface shadow-lg hidden md:block group"
         >
           <div className="absolute inset-0 w-full h-full bg-[#111]">
-            {localVideoUrl ? (
-              <video
-                src={localVideoUrl}
-                className="w-full h-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
-            ) : (
-              <div className="w-full h-full relative">
-                <img
-                  src="https://images.unsplash.com/photo-1646531840695-62810bcd1171?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200"
-                  alt="Fahrzeugfolierung in Arbeit"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
-            
-            {/* Overlay Controls */}
-            <div className="absolute inset-x-0 top-0 bg-gradient-to-b from-black/80 to-transparent p-6 z-10 flex justify-between items-start">
+            <video
+              src="/videos/hero.mp4"
+              className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              data-testid="hero-video"
+            />
+
+            {/* Top overlay badge */}
+            <div className="absolute inset-x-0 top-0 bg-gradient-to-b from-black/70 to-transparent p-6 z-10 flex justify-between items-start pointer-events-none">
               <div className="flex items-center gap-2 bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
                 <span className="w-2.5 h-2.5 rounded-full bg-brand-cyan animate-pulse" />
                 <span className="text-[11px] font-mono text-white tracking-wider uppercase">{t('hero.preview')}</span>
-              </div>
-              
-              {/* Upload / Edit Controls - Always visible */}
-              <div className="flex flex-col gap-2 pointer-events-auto">
-                <button
-                  onClick={() => fileInputRef.current?.click()}
-                  className="p-3 bg-black/60 hover:bg-black/80 rounded-full transition-colors backdrop-blur-md shadow-lg border border-white/10"
-                  title="Video ändern"
-                >
-                  <Camera className="w-5 h-5 text-white" />
-                </button>
-                {localVideoUrl && (
-                  <button
-                    onClick={handleRemoveVideo}
-                    className="p-3 bg-red-500/80 hover:bg-red-500 rounded-full transition-colors backdrop-blur-md shadow-lg border border-white/10"
-                    title="Video entfernen"
-                  >
-                    <Trash2 className="w-5 h-5 text-white" />
-                  </button>
-                )}
-              </div>
-            </div>
-
-            {/* Bottom Bar Controls */}
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 z-10">
-              <div className="flex items-end justify-between pointer-events-none">
-                <div className="flex flex-col text-white max-w-xs md:max-w-md drop-shadow-md">
-                  <p className="text-sm font-bold tracking-tight uppercase mb-1">{t('hero.teslaWrap')}</p>
-                </div>
               </div>
             </div>
           </div>
@@ -227,4 +134,3 @@ export function Hero() {
     </section>
   );
 }
-
