@@ -112,6 +112,7 @@ export function Hero() {
           <div className="absolute inset-0 w-full h-full bg-[#111]">
             <video
               src="/videos/hero.mp4"
+              poster="/videos/hero_poster.jpg"
               className="w-full h-full object-cover"
               autoPlay
               muted
