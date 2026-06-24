@@ -1,10 +1,17 @@
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Star } from 'lucide-react';
 import { TypewriterText } from './TypewriterText';
+import { useState } from 'react';
 import { useLanguage } from '../lib/LanguageContext';
+
+const HERO_VIDEOS = [
+  { src: '/videos/hero1.mp4', poster: '/videos/hero1_poster.jpg' },
+  { src: '/videos/hero2.mp4', poster: '/videos/hero2_poster.jpg' },
+];
 
 export function Hero() {
   const { t, language } = useLanguage();
+  const [videoIndex, setVideoIndex] = useState(0);
 
   const scrollToContact = () => {
     document.getElementById('offerte')?.scrollIntoView({ behavior: 'smooth' });
@@ -110,17 +117,24 @@ export function Hero() {
            className="relative h-[450px] lg:h-[580px] rounded-2xl overflow-hidden border border-black/10 bg-brand-surface shadow-lg hidden md:block group"
         >
           <div className="absolute inset-0 w-full h-full bg-[#111]">
-            <video
-              src="/videos/hero.mp4"
-              poster="/videos/hero_poster.jpg"
-              className="w-full h-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              data-testid="hero-video"
-            />
+            <AnimatePresence>
+              <motion.video
+                key={videoIndex}
+                src={HERO_VIDEOS[videoIndex].src}
+                poster={HERO_VIDEOS[videoIndex].poster}
+                className="absolute inset-0 w-full h-full object-cover"
+                autoPlay
+                muted
+                playsInline
+                preload="auto"
+                onEnded={() => setVideoIndex((i) => (i + 1) % HERO_VIDEOS.length)}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8, ease: 'easeInOut' }}
+                data-testid="hero-video"
+              />
+            </AnimatePresence>
           </div>
         </motion.div>
       </div>
