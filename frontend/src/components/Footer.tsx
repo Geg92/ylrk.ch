@@ -1,4 +1,4 @@
-import { Copy, Check, Sparkles } from 'lucide-react';
+import { Copy, Check } from 'lucide-react';
 import { useState } from 'react';
 import { Logo } from './Logo';
 import { useLanguage } from '../lib/LanguageContext';
@@ -125,11 +125,6 @@ export function Footer() {
         
         <div className="border-t border-black/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-brand-muted gap-4">
           <p>&copy; {new Date().getFullYear()} YLRK Beschriftungen. {t('footer.rights')}</p>
-          
-          <div className="flex items-center space-x-2 bg-brand-bg px-3 py-1.5 rounded-full border border-black/5 text-xs">
-            <Sparkles size={12} className="text-brand-cyan" />
-            <span>Built with <span className="text-brand-text font-medium">Google AI Studio</span> & <span className="text-brand-text font-medium">Antigravity Gemini</span></span>
-          </div>
         </div>
       </div>
     </footer>
