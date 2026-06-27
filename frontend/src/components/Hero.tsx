@@ -59,7 +59,7 @@ export function Hero() {
           className="max-w-2xl"
         >
           {/* Trust badge */}
-          <div className="inline-flex items-center space-x-2 bg-brand-surface border border-black/10 px-3 py-1.5 rounded-full mb-8">
+          <div className="inline-flex items-center space-x-2 bg-brand-surface border border-black/10 px-3 py-1.5 rounded-full mb-4">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-brand-cyan text-brand-cyan" />
@@ -67,6 +67,16 @@ export function Hero() {
             </div>
             <span className="text-xs font-medium text-brand-muted">
               {t('hero.trustBadge')}
+            </span>
+          </div>
+
+          <div className="mb-8 flex items-center gap-2" data-testid="hero-slogan">
+            <span className="text-sm font-display font-semibold tracking-[0.18em] uppercase text-brand-text">
+              Ein Mann, ein Wort
+            </span>
+            <span className="text-brand-cyan font-bold">·</span>
+            <span className="text-sm font-display font-bold tracking-[0.18em] uppercase text-brand-cyan">
+              YLBER.A
             </span>
           </div>
 
