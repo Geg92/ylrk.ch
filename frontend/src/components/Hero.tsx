@@ -70,13 +70,9 @@ export function Hero() {
             </span>
           </div>
 
-          <div className="mb-8 flex items-center gap-2" data-testid="hero-slogan">
-            <span className="text-sm font-display font-semibold tracking-[0.18em] uppercase text-brand-text">
-              Ein Mann, ein Wort
-            </span>
-            <span className="text-brand-cyan font-bold">·</span>
-            <span className="text-sm font-display font-bold tracking-[0.18em] uppercase text-brand-text">
-              YLBER A.
+          <div className="mb-8" data-testid="hero-slogan">
+            <span className="text-sm font-display font-bold tracking-[0.18em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-black via-blue-700 to-brand-cyan">
+              Ein Mann, ein Wort · YLBER A.
             </span>
           </div>
 
