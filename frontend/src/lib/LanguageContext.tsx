@@ -193,7 +193,7 @@ const DE = {
   'form.submitting': 'Wird gesendet...',
 
   // Footer & Contact & Others
-  'footer.description': 'Ihr Partner für massgeschneiderte Fahrzeugbeschriftungen, Schaufensterfolierungen und innovative Werbetechnik in der Region Basel und schweizweit.',
+  'footer.description': 'Ihr Partner für massgeschneiderte Fahrzeugbeschriftungen, Schaufensterfolierungen und innovative Werbetechnik schweizweit.',
   'footer.quickLinks': 'Schnellzugriff',
   'footer.contact': 'Kontakt',
   'footer.location': 'Standort',
@@ -399,7 +399,7 @@ const EN = {
   'form.submitting': 'Sending Quote Request...',
 
   // Footer & Contact & Others
-  'footer.description': 'Your reliable partner for professional fleet graphics, vehicle wrapping, storefront glass branding, and custom signages in the greater Basel region and across Switzerland.',
+  'footer.description': 'Your reliable partner for professional fleet graphics, vehicle wrapping, storefront glass branding, and custom signages across Switzerland.',
   'footer.quickLinks': 'Quick Links',
   'footer.contact': 'Contact Us',
   'footer.location': 'Our Atelier',
