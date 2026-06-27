@@ -75,8 +75,8 @@ export function Hero() {
               Ein Mann, ein Wort
             </span>
             <span className="text-brand-cyan font-bold">·</span>
-            <span className="text-sm font-display font-bold tracking-[0.18em] uppercase text-brand-cyan">
-              YLBER.A
+            <span className="text-sm font-display font-bold tracking-[0.18em] uppercase text-brand-text">
+              YLBER A.
             </span>
           </div>
 
