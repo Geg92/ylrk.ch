@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { Star, Quote } from 'lucide-react';
 import { TestimonialProjectImage } from './TestimonialProjectImage';
-import { PortfolioImageManager } from './PortfolioImageManager';
 import { useLanguage } from '../lib/LanguageContext';
 
 export function Testimonials() {
@@ -71,7 +70,7 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              key={index}
+              key={testimonial.company}
               className="bg-brand-bg rounded-lg p-8 border border-black/10 relative group"
             >
               <Quote size={40} className="absolute top-6 right-6 text-brand-text/5 group-hover:text-brand-cyan/10 transition-colors" />

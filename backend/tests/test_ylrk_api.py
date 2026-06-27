@@ -105,7 +105,7 @@ def test_create_and_list_inquiry(session):
     r = session.post(f"{API}/inquiries", json=payload, timeout=15)
     assert r.status_code == 200, r.text
     data = r.json()
-    assert data.get("success") is True
+    assert data.get("success") == True
     assert "id" in data
     inquiry_id = data["id"]
 

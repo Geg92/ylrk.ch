@@ -30,7 +30,7 @@ export function AIChatBot() {
           : 'Hallo! Ich bin der YLRK KI-Assistent. Haben Sie Fragen zu unseren Beschriftungen oder Preisen? Ich helfe Ihnen gerne weiter!'
       }
     ]);
-  }, [language]);
+  }, [language, isEn]);
 
   useEffect(() => {
     if (messagesEndRef.current) {

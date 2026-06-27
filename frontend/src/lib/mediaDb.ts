@@ -32,8 +32,7 @@ export function getStoredHeroVideo(): Promise<Blob | null> {
       };
       
       request.onerror = () => resolve(null);
-    } catch (e) {
-      console.warn('IndexedDB is not available:', e);
+    } catch {
       resolve(null);
     }
   });
@@ -62,8 +61,7 @@ export function saveStoredHeroVideo(blob: Blob): Promise<boolean> {
       };
       
       request.onerror = () => resolve(false);
-    } catch (e) {
-      console.warn('Failed to save to IndexedDB:', e);
+    } catch {
       resolve(false);
     }
   });

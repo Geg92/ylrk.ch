@@ -37,7 +37,7 @@ export function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              key={index} 
+              key={faq.question} 
               className="bg-brand-bg border border-black/5 rounded overflow-hidden"
             >
               <button

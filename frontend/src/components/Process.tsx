@@ -46,7 +46,7 @@ export function Process() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                key={index} 
+                key={step.number} 
                 className="relative z-10 flex flex-col items-center text-center"
              >
                <div className="w-24 h-24 rounded-full bg-brand-surface border border-black/10 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(0,0,0,0.15)]">

@@ -62,8 +62,7 @@ export function PortfolioImageManager() {
       
       // Dispatch custom event to notify listeners immediately
       window.dispatchEvent(new Event('portfolio-update'));
-    } catch (err) {
-      console.error("Upload error:", err);
+    } catch {
       alert("Das Bild ist zu groß oder konnte nicht gespeichert werden.");
     }
   };
