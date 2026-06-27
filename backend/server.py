@@ -78,7 +78,7 @@ def chat_system_instruction(is_en: bool) -> str:
             "- Car Wrapping (Vollfolierung): from CHF 2500\n"
             "- Shop Window Lettering: from CHF 150\n"
             "- Company Signs: from CHF 180\n"
-            "- Textile Printing: from CHF 25 per piece\n"
+            "- Textile Printing: from CHF 30 per piece (CHF 30-60)\n"
             "Recommend that the client request a personalized quote using the inquiry form on the main page, "
             "or via Phone/WhatsApp (+41 76 433 77 95)."
         )
@@ -92,7 +92,7 @@ def chat_system_instruction(is_en: bool) -> str:
         "- Vollfolierung (Car Wrapping): ab CHF 2500\n"
         "- Schaufensterbeschriftung: ab CHF 150\n"
         "- Firmenschilder: ab CHF 180\n"
-        "- Textildruck: ab CHF 25 pro Stück\n"
+        "- Textildruck: CHF 30–60 pro Stück\n"
         "Empfehle dem Kunden, über das Kontaktformular auf der Hauptseite oder per Telefon/WhatsApp "
         "(+41 76 433 77 95) eine individuelle Offerte einzuholen."
     )

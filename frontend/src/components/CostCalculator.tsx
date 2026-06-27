@@ -17,6 +17,13 @@ const INTENSITIES = [
   { id: 'full', label: 'Komplex / Vollflächig', baseMin: 1200, baseMax: 2000 },
 ];
 
+// Fixed per-piece price range for textile printing (CHF). Total range stays 30-60.
+const TEXTILE_PRICES: Record<string, { min: number; max: number }> = {
+  subtle: { min: 30, max: 40 },
+  medium: { min: 40, max: 50 },
+  full: { min: 50, max: 60 },
+};
+
 export function CostCalculator() {
   const { t } = useLanguage();
   const [category, setCategory] = useState<typeof CATEGORIES[0] | null>(null);
@@ -62,14 +69,18 @@ export function CostCalculator() {
     else if (quantity >= 100) { discountMultiplier = 0.70; discountPercentage = 30; }
   }
 
-  const minPriceRaw = category && intensity ? intensity.baseMin * category.multiplier : 0;
-  const maxPriceRaw = category && intensity ? intensity.baseMax * category.multiplier : 0;
+  let unitMin = category && intensity ? intensity.baseMin * category.multiplier : 0;
+  let unitMax = category && intensity ? intensity.baseMax * category.multiplier : 0;
+  if (category?.id === 'textile' && intensity) {
+    unitMin = TEXTILE_PRICES[intensity.id].min;
+    unitMax = TEXTILE_PRICES[intensity.id].max;
+  }
 
-  const minPrice = Math.round(minPriceRaw * quantity * discountMultiplier);
-  const maxPrice = Math.round(maxPriceRaw * quantity * discountMultiplier);
-  
-  const piecePriceMin = Math.round(minPriceRaw * discountMultiplier);
-  const piecePriceMax = Math.round(maxPriceRaw * discountMultiplier);
+  const minPrice = Math.round(unitMin * quantity * discountMultiplier);
+  const maxPrice = Math.round(unitMax * quantity * discountMultiplier);
+
+  const piecePriceMin = Math.round(unitMin * discountMultiplier);
+  const piecePriceMax = Math.round(unitMax * discountMultiplier);
 
   let currentStep = 1;
   if (category) currentStep = 2;

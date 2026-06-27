@@ -5,8 +5,8 @@ import { useState } from 'react';
 import { useLanguage } from '../lib/LanguageContext';
 
 const HERO_VIDEOS = [
-  { src: '/videos/hero1.mp4', poster: '/videos/hero1_poster.jpg' },
   { src: '/videos/hero2.mp4', poster: '/videos/hero2_poster.jpg' },
+  { src: '/videos/hero1.mp4', poster: '/videos/hero1_poster.jpg' },
 ];
 
 export function Hero() {
@@ -70,7 +70,7 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-display font-bold leading-[0.9] tracking-tight mb-6 uppercase">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-[0.95] tracking-tight mb-6 uppercase">
             {t('hero.headingLine1')}<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-blue-500">
               {t('hero.headingLine2')}

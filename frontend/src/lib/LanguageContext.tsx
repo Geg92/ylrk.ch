@@ -19,7 +19,7 @@ const DE = {
   'nav.langLabel': 'Sprache / Language:',
 
   // Hero
-  'hero.trustBadge': 'Über 200 Fahrzeuge beschriftet · Schweizweit im Einsatz',
+  'hero.trustBadge': 'Über 150 Fahrzeuge beschriftet · Schweizweit im Einsatz',
   'hero.headingLine1': 'Ihr Fahrzeug.',
   'hero.headingLine2': 'Ihr Logo.',
   'hero.headingLine3': 'Morgen auf der Strasse.',
@@ -225,7 +225,7 @@ const EN = {
   'nav.langLabel': 'Language / Sprache:',
 
   // Hero
-  'hero.trustBadge': 'Over 200 vehicles branded · Active Switzerland-wide',
+  'hero.trustBadge': 'Over 150 vehicles branded · Active Switzerland-wide',
   'hero.headingLine1': 'Your vehicle.',
   'hero.headingLine2': 'Your logo.',
   'hero.headingLine3': 'On the road tomorrow.',

@@ -34,8 +34,8 @@ export function ExperienceStats() {
   const { t } = useLanguage();
   const stats = [
     { icon: Calendar, value: 5, suffix: "+", label: t('stats.years') },
-    { icon: Car, value: 350, suffix: "+", label: t('stats.cars') },
-    { icon: Users, value: 500, suffix: "+", label: t('stats.customers') },
+    { icon: Car, value: 150, suffix: "+", label: t('stats.cars') },
+    { icon: Users, value: 200, suffix: "+", label: t('stats.customers') },
   ];
 
   return (
